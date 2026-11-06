@@ -1,8 +1,8 @@
 // API Configuration
 
-const API_BASE = 'https://api.themoviedb.org/3/'
+const API_BASE = 'https://movie-app-api.gulmammadlisarkhan.workers.dev/'
 
-const API_KEY = 'YOUR_TMDB_API_KEY'
+
 const IMG_BASE = 'https://image.tmdb.org/t/p/'
 
 // Application State
@@ -107,7 +107,7 @@ const getMovies = async () => {
             dateParam = `&primary_release_date.lte=${stringDate}`
         }
 
-        const response = await fetch(`${API_BASE}discover/movie?api_key=${API_KEY}&page=${page}${genreParam}${yearParam}${sortParam}${voteCountParam}${dateParam}`)
+        const response = await fetch(`${API_BASE}discover/movie?page=${page}${genreParam}${yearParam}${sortParam}${voteCountParam}${dateParam}`)
 
         if(!response.ok) {
             throw new Error('Failed to fetch movies')
@@ -328,7 +328,7 @@ const searchMovies = async (searchValue) => {
             statusMessage.classList.remove('hidden')
         }
 
-        const response = await fetch(`${API_BASE}search/movie?api_key=${API_KEY}&query=${encodeURIComponent(searchValue)}&page=${page}`)
+        const response = await fetch(`${API_BASE}search/movie?query=${encodeURIComponent(searchValue)}&page=${page}`)
 
         if(!response.ok){
             throw new Error('Failed to search movies')
@@ -396,7 +396,7 @@ const getTrendingMovies = async () => {
             statusMessage.classList.remove('hidden')
         }
 
-        const response = await fetch(`${API_BASE}trending/movie/week?api_key=${API_KEY}&page=${page}`)
+        const response = await fetch(`${API_BASE}trending/movie/week?page=${page}`)
 
         if(!response.ok) {
             throw new Error('Failed to fetch trending movies')
