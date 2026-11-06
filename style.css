@@ -1036,6 +1036,24 @@ select:focus-visible {
     }
 }
 
+.site-footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.site-footer img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.site-footer p {
+    font-size: 13px;
+    color: #999;
+    line-height: 1.6;
+}
+
 
 
 @media (prefers-reduced-motion: reduce) {
