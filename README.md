@@ -38,9 +38,15 @@ My goal was to create something more advanced than my previous JavaScript projec
 
 ## API Setup
 
-This project uses the TMDB API. The API key is not included in this repository.
+This project uses the TMDB API to fetch movie information.
 
-The live version will require a configured API connection.
+API requests are handled through a Cloudflare Worker, keeping the TMDB API token secure and out of the frontend source code.
+
+The live application is fully functional.
+
+## Live Demo
+
+https://sarkhhann.github.io/advanced-movie-app/
 
 ## Author
 
